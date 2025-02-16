@@ -46,9 +46,15 @@ function Products ({items,advertisement,setAdvertisement }) {
            
         </ul>
     )}
-    <div className=' flex sm:m-6 border-2 sm:p-10 rounded-4xl md:m-20 md:p-20 md:ml-5 lg:w-200 lg:h-150 justify-center flex-col bg-white shadow-2xl drop-shadow-lg backdrop-blur-3xl  xs:pt-6 xs:w-58 xs:h-38 '  >
-        <h1 className=' flex justify-center text-3xl font-mono p-5 align-middle bg-blue-950 text-white rounded-4xl xs:text-sm '>Top DEals For u</h1>
-        <img className='flex justify-center  sm:w-80 sm:h-70 align-middle md:w-130 md:h-120  lg:p-20 lg:pl-40 xs:w-30 h-30  ' src={advertisement} ></img>
+    <div className="flex flex-col items-center border-2 sm:m-6 sm:p-10 rounded-3xl md:m-20 md:p-20 md:ml-5 lg:w-[400px] lg:h-[300px] justify-center bg-white shadow-2xl drop-shadow-lg backdrop-blur-3xl sm:h-auto xs:pt-6 xs:w-[250px] xs:h-[250px] md:min-w-[320px]">
+  <h1 className="text-center text-3xl font-mono p-5 bg-blue-950 text-white rounded-3xl xs:text-sm xs:p-2 md:text-2xl">
+    Top Deals For You
+  </h1>
+  <img
+    className="mx-auto sm:w-[200px] sm:h-[120px] md:w-[250px] md:h-[150px] lg:w-[300px] lg:h-[180px] xs:w-[120px] xs:h-[100px] p-5"
+    src={advertisement}
+    alt="Advertisement"
+  />
       </div>  
      </div> 
 

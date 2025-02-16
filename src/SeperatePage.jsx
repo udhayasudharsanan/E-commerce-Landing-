@@ -31,7 +31,7 @@ return(
    </div>
    <div className=" m-10 h-80  border-2  flex flex-col justify-center gap-2.5 p-7 border-2  text-black rounded-3xl xs:text-xl overflow-auto ">
     
-   <h1 className=" font-serif text-2xl text-blue-900 xs:text-xl "> Category : <span className="  text-black">{product.category}</span></h1>
+   <h1 className=" font-serif text-2xl text-blue-900 xs:text-xl xs:pt-10  "> Category : <span className="  text-black">{product.category}</span></h1>
    <h1 className="font-serif text-2xl text-blue-900 xs:text-xl  "> Description :<span className=" text-black flex-wrap">{product.description}</span> </h1>
    <Link className=" absolute translate-x-1/2 translate-y-8/2 xs:absolute translate-x-1/3 translate-y-40 " to={`/cart/${product.id}`}>
     <button className=" w-50 h-10  rounded-3xl bg-amber-400  text-amber-50 font-sans shadow-xl xs:text-xs xs:w-40 ">Add to Cart</button>
