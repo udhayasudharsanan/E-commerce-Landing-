@@ -119,18 +119,18 @@ return (
     <h1 className=" flex justify-center pb-10 text-2xl text-cyan-800 align-middle " > Try to add some products and come again </h1></div>
     ) : <ul>{    
     cart.map((prod) => (
-                <li className=" md:m-2 md:p-7 flex md:flex-row justify-center sm:p-3 sm:flex-col sm:items-center md:ml-70 lg:ml-0  " key={prod.id} >
-                    <img  className="lg:w-50 lg:h-50 md:p-8 md:m-4 sm:w-25 sm:h-25 sm:p-3 sm:m-2 md:w-40 md:h-40" src ={`${prod.image}`}></img>
-                    <div className=" md:pt-10 sm:p-5 sm:pl-60 md:pl-0" >
-                    <h1 className=" md:text-2xl font-serif sm:text-xl align-middle md:flex-wrap   " >{
+                <li className=" md:m-2 md:p-7 flex md:flex-row justify-center sm:p-3 sm:flex-col sm:items-center md:ml-70 lg:ml-0 xs:flex-col xs:p-5 xs:m-5 xs:justify-center xs:items-center   " key={prod.id} >
+                    <img  className="lg:w-50 lg:h-50 md:p-8 md:m-4 sm:w-25 sm:h-25 sm:p-3 sm:m-2 md:w-40 md:h-40 xs:w-20 xs:h-20" src ={`${prod.image}`}></img>
+                    <div className=" md:pt-10 sm:p-5 sm:pl-60 md:pl-0 " >
+                    <h1 className=" md:text-2xl font-serif sm:text-xl align-middle md:flex-wrap xs:text-xl xs:justify-center xs:flex xs:p-5 " >{
                         (prod.title).length <=25 ?prod.title :  
                             (prod.title).slice(0,25) + "..." }</h1>
-                    <h1 className=" md:text-3xl m-2 ml-0 sm:text-2xl  "> Price :  ₹ {prod.price}</h1> 
+                    <h1 className=" md:text-3xl m-2 ml-0 sm:text-2xl xs:justify-center xs:flex xs:p-0  "> Price :  ₹ {prod.price}</h1> 
                     <form onSubmit={(e)=> e.preventDefault()} >
-                        <button  className="pl-2 pr-2 m-2 rounded-2xl border-2 align-middle bg-white text-black hover:bg-black hover:text-white" onClick={()=>changeQuantity(prod.id,-1) } > - </button>
+                        <button  className="pl-2 pr-2 m-2 rounded-2xl border-2 align-middle bg-white text-black hover:bg-black hover:text-white xs:justify-center xs:ml-80 " onClick={()=>changeQuantity(prod.id,-1) } > - </button>
                         {prod.quantity}    
-                        <button className="pl-2 pr-2 m-2 rounded-2xl align-middle border-2 bg-white text-black hover:bg-black hover:text-white" onClick={()=>changeQuantity(prod.id,+1) } > + </button> 
-                         <button className="pl-2 pr-2 m-2 align-middle " onClick={()=>handleDelete(prod.id)} ><MdDelete className="w-9 h-9 "/></button>   
+                        <button className="pl-2 pr-2 m-2 rounded-2xl align-middle border-2 bg-white text-black hover:bg-black hover:text-white xs:0 xs:justify-center xs:ml-2" onClick={()=>changeQuantity(prod.id,+1) } > + </button> 
+                         <button className="pl-2 pr-2 m-2 align-middle xs:justify-center xs:pl-2 " onClick={()=>handleDelete(prod.id)} ><MdDelete className="w-9 h-9 "/></button>   
                     </form>
                     <h1>---------------------------------------------------------------------------------------------------------------------------------</h1>
                     </div>           

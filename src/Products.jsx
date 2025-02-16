@@ -31,10 +31,10 @@ function Products ({items,advertisement,setAdvertisement }) {
           
             
              
-            <li key={prod.id} className=" flex flex-col  m-5 p-5 md:w-80 md:h-90 border-1 rounded-2xl justify-center items-center sm:w-60 sm:h-65 bg-white backdrop-blur-5xl shadow-lg " >
+            <li key={prod.id} className=" flex flex-col  m-5 p-5 md:w-80 md:h-90 border-1 rounded-2xl justify-center items-center sm:w-60 sm:h-65 bg-white backdrop-blur-5xl shadow-lg xs:w-40 xs:m-3 xs:p-2  " >
             <Link  to = { `/${prod.id}`} >
-                    <img src={prod.image} className="sm:w-25 sm:h-25 md:w-40 md:h-40 items-center p-4 m-3 " ></img>
-                    <p className= " font-sans md:text-xl pl-4 pt-2 pb-2 sm:text-base  " > {
+                    <img src={prod.image} className="sm:w-25 sm:h-25 md:w-40 md:h-40 items-center p-4 m-3 xs:max-w-20 xs:max-h-20 xs:p-3 xs:m-3 " ></img>
+                    <p className= " font-sans md:text-xl pl-4 pt-2 pb-2 sm:text-base xs:text-xs  " > {
                         (prod.title).length <=25 ?prod.title :  
                             (prod.title).slice(0,25) + "..." } 
                                                         
@@ -46,9 +46,9 @@ function Products ({items,advertisement,setAdvertisement }) {
            
         </ul>
     )}
-    <div className=' flex sm:m-6 border-2 sm:p-10 rounded-4xl md:m-20 md:p-20 md:ml-5 lg:w-200 lg:h-150 justify-center flex-col bg-white shadow-2xl drop-shadow-lg backdrop-blur-3xl  '  >
-        <h1 className=' flex justify-center text-3xl font-mono p-5 align-middle bg-blue-950 text-white rounded-4xl  '>Top DEals For u</h1>
-        <img className='flex justify-center  sm:w-80 sm:h-70 align-middle md:w-130 md:h-120  lg:p-20 lg:pl-40 ' src={advertisement} ></img>
+    <div className=' flex sm:m-6 border-2 sm:p-10 rounded-4xl md:m-20 md:p-20 md:ml-5 lg:w-200 lg:h-150 justify-center flex-col bg-white shadow-2xl drop-shadow-lg backdrop-blur-3xl  xs:pt-6 xs:w-58 xs:h-38 '  >
+        <h1 className=' flex justify-center text-3xl font-mono p-5 align-middle bg-blue-950 text-white rounded-4xl xs:text-sm '>Top DEals For u</h1>
+        <img className='flex justify-center  sm:w-80 sm:h-70 align-middle md:w-130 md:h-120  lg:p-20 lg:pl-40 xs:w-30 h-30  ' src={advertisement} ></img>
       </div>  
      </div> 
 
